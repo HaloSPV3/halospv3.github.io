@@ -19,7 +19,7 @@ gem "rake", "~> 13.2.0"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll","~> 4.3.3", group: :jekyll_plugins
+gem "jekyll","~> 4.4.0", group: :jekyll_plugins
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", github: 'jekyll/minima', branch: "master"
