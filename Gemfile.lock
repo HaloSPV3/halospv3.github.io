@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jekyll/minima.git
-  revision: 43f3ed05dc0f6842d9292a6a827b31a8914ed714
+  revision: db3b4bf19ac44fbdce6359dae99cdc7cfce54d7c
   branch: master
   specs:
     minima (3.0.0.dev)
@@ -25,10 +25,10 @@ GEM
     ffi (1.17.1-x64-mingw-ucrt)
     ffi (1.17.1-x86_64-linux-gnu)
     forwardable-extended (2.6.0)
-    google-protobuf (4.30.0-x64-mingw-ucrt)
+    google-protobuf (4.30.1-x64-mingw-ucrt)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.30.0-x86_64-linux)
+    google-protobuf (4.30.1-x86_64-linux)
       bigdecimal
       rake (>= 13)
     http_parser.rb (0.8.0)
