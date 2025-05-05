@@ -1,3 +1,3 @@
-# halospv3.github.io
+# [halospv3.github.io](https://halospv3.github.io)
 
 The source repository for the neglected homepage of SPV3 mod for Halo: Custom Edition.
