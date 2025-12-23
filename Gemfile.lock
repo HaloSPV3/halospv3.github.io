@@ -31,7 +31,7 @@ GEM
     google-protobuf (4.32.1-x86_64-linux-gnu)
       bigdecimal
       rake (>= 13)
-    http_parser.rb (0.8.0)
+    http_parser.rb (0.8.1)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     jekyll (4.4.1)
@@ -100,7 +100,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  http_parser.rb (~> 0.6.0)
+  http_parser.rb (~> 0.8.0)
   jekyll (~> 4.4.0)
   jekyll-feed (~> 0.17.0)
   kramdown-parser-gfm
@@ -111,7 +111,7 @@ DEPENDENCIES
   wdm (~> 0.2.0)
 
 RUBY VERSION
-   ruby 3.4.6p54
+   ruby 3.4.8p72
 
 BUNDLED WITH
    2.5.3
