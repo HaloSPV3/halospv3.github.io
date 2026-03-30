@@ -12,7 +12,7 @@ runs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
         cache-version: 0 # Increment this number if you need to re-download cached gems
       env:
-        BUNDLE_FROZEN: ${{ startsWith(github.ref_name, 'renovate/ruby-') }}
+        BUNDLE_FROZEN: ${{ !startsWith(github.ref_name, 'renovate/ruby-') }}
 
     - name: Setup Pages
       id: pages
