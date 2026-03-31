@@ -7,12 +7,23 @@ outputs:
 runs:
   using: "composite"
   steps:
+   - name: Is Git Branch "^renovate/ruby-[0-9]+[.]x$?"
+     id: isGitBranchRenovateRuby
+     shell: bash
+     run: |
+       v=$(if [[ "$(git branch --show-current)"  =~ ^renovate/ruby-[0-9]+[.]x$ ]];
+         then echo true;
+         else echo false;
+         fi;
+       );
+       echo "v=$v" >> "$GITHUB_OUTPUTS"
+
     - name: dbg
       shell: bash
       run: |
-        echo "github.ref_name: ${{ github.ref_name }}
-        phrase: renovate/ruby-
-        BUNDLE_FROZEN: ${{ !startsWith( github.ref_name, 'renovate/ruby-' ) }}
+        echo "currentGitBranch: $(git branch --show-current)
+        phrase: '^renovate/ruby-[0-9]+[.]x$'
+        BUNDLE_FROZEN: ${{ !steps.isGitBranchRenovateRuby.outputs.v }}
         "
 
     - uses: ruby/setup-ruby@v1
@@ -20,7 +31,7 @@ runs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
         cache-version: 0 # Increment this number if you need to re-download cached gems
       env:
-        BUNDLE_FROZEN: ${{ !startsWith( github.ref_name, 'renovate/ruby-') }}
+        BUNDLE_FROZEN: ${{ !step.isGitBranchRenovateRuby.outputs.v }}
 
     - name: Setup Pages
       id: pages
