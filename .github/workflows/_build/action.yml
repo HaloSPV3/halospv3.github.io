@@ -7,6 +7,12 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - name: dbg
+      run: |
+echo "github.ref_name: ${{ github.ref_name }}\
+phrase: renovate/ruby-\
+unfreeze_lockfile: ${{ !startsWith( github.ref_name, 'renovate/ruby-' ) }}"
+
     - uses: ruby/setup-ruby@v1
       with:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
