@@ -12,7 +12,7 @@ runs:
       run: |
         echo "github.ref_name: ${{ github.ref_name }}
         phrase: renovate/ruby-
-        unfreeze_lockfile: ${{ !startsWith( github.ref_name, 'renovate/ruby-' ) }}
+        BUNDLE_FROZEN: ${{ !startsWith( github.ref_name, 'renovate/ruby-' ) }}
         "
 
     - uses: ruby/setup-ruby@v1
