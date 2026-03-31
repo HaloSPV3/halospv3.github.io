@@ -8,6 +8,7 @@ runs:
   using: "composite"
   steps:
     - name: dbg
+      shell: bash
       run: |
         echo "github.ref_name: ${{ github.ref_name }}\
         phrase: renovate/ruby-\
