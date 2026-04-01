@@ -32,7 +32,7 @@ runs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
         cache-version: 0 # Increment this number if you need to re-download cached gems
       env:
-        BUNDLE_FROZEN: ${{ !step.isGitBranchRenovateRuby.outputs.v }}
+        BUNDLE_FROZEN: ${{ !steps.isGitBranchRenovateRuby.outputs.v }}
 
     - name: Setup Pages
       id: pages
