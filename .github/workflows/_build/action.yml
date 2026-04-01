@@ -17,7 +17,7 @@ runs:
           else echo false;
           fi;
         );
-        echo "v=$v" >> "$GITHUB_OUTPUTS"
+        echo "v=$v" >> "$GITHUB_OUTPUT"
 
     - name: dbg
       shell: bash
