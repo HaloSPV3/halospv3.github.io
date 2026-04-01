@@ -8,16 +8,16 @@ outputs:
 runs:
   using: "composite"
   steps:
-   - name: Is Git Branch "^renovate/ruby-[0-9]+[.]x$?"
-     id: isGitBranchRenovateRuby
-     shell: bash
-     run: |
-       v=$(if [[ "$(git branch --show-current)"  =~ ^renovate/ruby-[0-9]+[.]x$ ]];
-         then echo true;
-         else echo false;
-         fi;
-       );
-       echo "v=$v" >> "$GITHUB_OUTPUTS"
+    - name: Is Git Branch "^renovate/ruby-[0-9]+[.]x$?"
+      id: isGitBranchRenovateRuby
+      shell: bash
+      run: |
+        v=$(if [[ "$(git branch --show-current)"  =~ ^renovate/ruby-[0-9]+[.]x$ ]];
+          then echo true;
+          else echo false;
+          fi;
+        );
+        echo "v=$v" >> "$GITHUB_OUTPUTS"
 
     - name: dbg
       shell: bash
