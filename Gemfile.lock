@@ -135,6 +135,7 @@ DEPENDENCIES
   http_parser.rb (~> 0.8.0)
   jekyll (~> 4.4.0)
   jekyll-feed (~> 0.17.0)
+  jekyll-seo-tag (~> 2.8)
   kramdown-parser-gfm
   minima!
   rake (~> 13.3.1)
@@ -200,7 +201,7 @@ CHECKSUMS
   webrick (1.9.2) sha256=beb4a15fc474defed24a3bda4ffd88a490d517c9e4e6118c3edce59e45864131
 
 RUBY VERSION
-  ruby 4.0.1
+  ruby 4.0.2
 
 BUNDLED WITH
   4.0.5
