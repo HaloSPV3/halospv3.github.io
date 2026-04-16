@@ -2,7 +2,7 @@ source "https://rubygems.org"
 ruby File.read(".ruby-version").strip
 
 # See https://github.com/protocolbuffers/protobuf/pull/15203
-gem "rake", "~> 13.3.1"
+gem "rake", "~> 13.4.0"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
